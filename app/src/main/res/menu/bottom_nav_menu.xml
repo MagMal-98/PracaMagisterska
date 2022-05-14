@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/plant_list"
+        android:title="Plant List"
+        android:icon="@drawable/ic_baseline_list_24"/>
+    <item
+        android:id="@+id/plant_recognizer"
+        android:title="Plant Recognizer"
+        android:icon="@drawable/ic_baseline_local_florist_24"/>
+    <item
+        android:id="@+id/plant_notifications"
+        android:title="Notifications"
+        android:icon="@drawable/ic_baseline_alarm_24"/>
+</menu>
