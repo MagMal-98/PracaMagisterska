@@ -128,6 +128,7 @@ public class PlantSingleViewActivity extends AppCompatActivity {
         return true;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     private void waterPlant(){
         plant.waterPlant();
 
