@@ -76,6 +76,9 @@ public class MainActivity extends AppCompatActivity {
                     replaceFragment(new NotificationFragment());
                     break;
 
+                case R.id.settings:
+                    replaceFragment(new SettingsFragment());
+                    break;
 
             }
 

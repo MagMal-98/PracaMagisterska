@@ -27,7 +27,7 @@ public class PlantListFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_plant_list, container, false);
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.plantList);
+        recyclerView = view.findViewById(R.id.plantList);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         FirebaseRecyclerOptions<PlantItem> options =

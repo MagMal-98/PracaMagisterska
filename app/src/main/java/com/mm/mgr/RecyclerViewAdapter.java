@@ -1,5 +1,6 @@
 package com.mm.mgr;
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,12 +9,17 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 import com.bumptech.glide.Glide;
+import com.google.firebase.auth.FirebaseAuth;
+import com.mm.mgr.databinding.ActivityMainBinding;
 
 public class RecyclerViewAdapter extends FirebaseRecyclerAdapter<PlantItem, RecyclerViewAdapter.MyViewHolder> {
 
@@ -35,13 +41,54 @@ public class RecyclerViewAdapter extends FirebaseRecyclerAdapter<PlantItem, Recy
                         plantItem.getBloomTime(), plantItem.getSoilPh(), plantItem.getSunExpoisure(), plantItem.getInfo())).addToBackStack(null).commit();
             }
         });
+
     }
+
+
+//    protected void onCreate(Bundle savedInstanceState) {
+//        binding = ActivityMainBinding.inflate(getLayoutInflater());
+//        setContentView(binding.getRoot());
+//        replaceFragment(new PlantListFragment());
+//
+//        binding.bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
+//
+//            switch(item.getItemId()){
+//                case R.id.plant_list:
+//                    replaceFragment(new PlantListFragment());
+//                    break;
+//
+//                case R.id.plant_recognizer:
+//                    replaceFragment(new RecognizerFragment());
+//                    break;
+//
+//                case R.id.plant_notifications:
+//                    replaceFragment(new NotificationFragment());
+//                    break;
+//
+//                case R.id.settings:
+//                    replaceFragment(new SettingsFragment());
+//                    break;
+//
+//            }
+//
+//
+//            return true;
+//        });
+//    }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.plant_item, parent, false);
         return new MyViewHolder(view);
+    }
+
+    private void replaceFragment(Fragment fragment) {
+
+        FragmentManager fragmentManager = fragment.getParentFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout, fragment);
+        fragmentTransaction.commit();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
