@@ -2,18 +2,18 @@ package com.mm.mgr;
 
 public class PlantItem {
 
-    String title, subtitle, bloomTime, info, soilPh, sunExpoisure, purl;
+    String title, subtitle, bloomTime, info, soilPh, sunExposure, purl;
 
     public PlantItem() {
     }
 
-    public PlantItem(String title, String subtitle, String bloomTime, String info, String soilPh, String sunExpoisure, String purl) {
+    public PlantItem(String title, String subtitle, String bloomTime, String info, String soilPh, String sunExposure, String purl) {
         this.title = title;
         this.subtitle = subtitle;
         this.bloomTime = bloomTime;
         this.info = info;
         this.soilPh = soilPh;
-        this.sunExpoisure = sunExpoisure;
+        this.sunExposure = sunExposure;
         this.purl = purl;
     }
 
@@ -63,12 +63,12 @@ public class PlantItem {
         this.soilPh = soilPh;
     }
 
-    public String getSunExpoisure() {
-        return sunExpoisure;
+    public String getSunExposure() {
+        return sunExposure;
     }
 
-    public void setSunExpoisure(String sunExpoisure) {
-        this.sunExpoisure = sunExpoisure;
+    public void setSunExposure(String sunExposure) {
+        this.sunExposure = sunExposure;
     }
 
     public String getPurl() {

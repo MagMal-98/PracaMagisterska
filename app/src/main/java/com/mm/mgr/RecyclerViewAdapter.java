@@ -18,8 +18,6 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 import com.bumptech.glide.Glide;
-import com.google.firebase.auth.FirebaseAuth;
-import com.mm.mgr.databinding.ActivityMainBinding;
 
 public class RecyclerViewAdapter extends FirebaseRecyclerAdapter<PlantItem, RecyclerViewAdapter.MyViewHolder> {
 
@@ -37,8 +35,8 @@ public class RecyclerViewAdapter extends FirebaseRecyclerAdapter<PlantItem, Recy
             @Override
             public void onClick(View view) {
                 AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                activity.getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new PlantInfoFragment(plantItem.getTitle(), plantItem.getSubtitle(), plantItem.getPurl(),
-                        plantItem.getBloomTime(), plantItem.getSoilPh(), plantItem.getSunExpoisure(), plantItem.getInfo())).addToBackStack(null).commit();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, new PlantInfoFragment(plantItem.getTitle(), plantItem.getSubtitle(),
+                        plantItem.getBloomTime(), plantItem.getInfo(), plantItem.getSoilPh(), plantItem.getSunExposure(),  plantItem.getPurl())).addToBackStack(null).commit();
             }
         });
 

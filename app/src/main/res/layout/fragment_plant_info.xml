@@ -5,75 +5,88 @@
     android:layout_height="match_parent"
     tools:context=".PlantInfoFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imagegholder"
-            android:layout_marginTop="40dp"
-            android:layout_width="240dp"
-            android:layout_height="228dp"
-            android:src="@color/common_google_signin_btn_text_dark_disabled"
-            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:id="@+id/titleHolder"
-            android:text="Candidate Name"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="#000"/>
+            <ImageView
+                android:id="@+id/imageHolder"
+                android:layout_width="240dp"
+                android:layout_height="228dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:src="@mipmap/ic_launcher" />
+            <!--            android:src="@color/common_google_signin_btn_text_dark_disabled"-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:id="@+id/subtitleHolder"
-            android:text="Candidate Course"
-            android:textSize="20sp"
-            android:textColor="#000"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:id="@+id/bloomHolder"
-            android:text="Candidate Email"
-            android:textSize="18sp"
-            android:textColor="#000"/>
+            <TextView
+                android:id="@+id/titleHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Candidate Name"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:id="@+id/soilHolder"
-            android:text="Candidate Email"
-            android:textSize="18sp"
-            android:textColor="#000"/>
+            <TextView
+                android:id="@+id/subtitleHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Candidate Subtitle"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="italic" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:id="@+id/sunHolder"
-            android:text="Candidate Email"
-            android:textSize="18sp"
-            android:textColor="#000"/>
+            <TextView
+                android:id="@+id/bloomHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Candidate Bloom"
+                android:textColor="#000"
+                android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:id="@+id/infoHolder"
-            android:text="Candidate Email"
-            android:textSize="18sp"
-            android:textColor="#000"/>
+            <TextView
+                android:id="@+id/soilHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Candidate Soil"
+                android:textColor="#000"
+                android:textSize="18sp" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/sunHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Candidate Sun"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/infoHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Candidate Info"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

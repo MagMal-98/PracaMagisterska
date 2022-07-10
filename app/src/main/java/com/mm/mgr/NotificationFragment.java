@@ -54,7 +54,7 @@ public class NotificationFragment extends Fragment {
                 case R.id.addPlant:
                     Intent intentCreatePlant = new Intent(requireContext(), CreatePlantActivity.class);
                     startActivity(intentCreatePlant);
-                    //overridePendingTransition(R.anim.anim_right_to_left, R.anim.anim_stay_put);
+                    activity.overridePendingTransition(R.anim.anim_right_to_left, R.anim.anim_stay_put);
                     break;
             }
             return true;
