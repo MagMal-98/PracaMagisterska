@@ -1,5 +1,6 @@
 package com.mm.mgr;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -7,6 +8,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -32,6 +35,7 @@ public class NotificationFragment extends Fragment {
         // Required empty public constructor
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -47,15 +51,14 @@ public class NotificationFragment extends Fragment {
         activity.setSupportActionBar(myToolbar);
         myToolbar.setBackgroundColor(Color.parseColor("#FFFFFF"));
         myToolbar.showOverflowMenu();
-        activity.getSupportActionBar().setTitle("Planted ");
+        activity.getSupportActionBar().setTitle("notify");
+        setHasOptionsMenu(true);
 
         myToolbar.setOnMenuItemClickListener(item -> {
-            switch (item.getItemId()) {
-                case R.id.addPlant:
-                    Intent intentCreatePlant = new Intent(requireContext(), CreatePlantActivity.class);
-                    startActivity(intentCreatePlant);
-                    activity.overridePendingTransition(R.anim.anim_right_to_left, R.anim.anim_stay_put);
-                    break;
+            if (item.getItemId() == R.id.addPlant) {
+                Intent intentCreatePlant = new Intent(requireContext(), CreatePlantActivity.class);
+                startActivity(intentCreatePlant);
+                activity.overridePendingTransition(R.anim.anim_right_to_left, R.anim.anim_stay_put);
             }
             return true;
         });
@@ -77,10 +80,10 @@ public class NotificationFragment extends Fragment {
         }
     }
 
-    //@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getActivity().getMenuInflater().inflate(R.menu.main_app_bar, menu);
-        return true;
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.main_app_bar, menu);
+        super.onCreateOptionsMenu(menu,inflater);
     }
 
 

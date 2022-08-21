@@ -11,7 +11,7 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@color/secondaryLightColor"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
@@ -19,7 +19,7 @@
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/white"
+            android:background="@color/secondaryLightColor"
             android:gravity="start"
             android:layoutDirection="rtl"
             app:menu="@menu/single_plant_view_app_bar" />
@@ -65,7 +65,7 @@
                 android:text="Freddy"
                 android:textAppearance="?attr/textAppearanceHeadline4"
                 android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:textColor="@color/secondaryTextColor"/>
 
             <TextView
                 android:id="@+id/plantSingleNextWater"
@@ -106,7 +106,7 @@
                         app:iconSize="42dp"
                         app:iconPadding="0dp"
                         app:iconGravity="textStart"
-                        app:iconTint="@color/white"
+                        app:iconTint="@color/secondaryLightColor"
                         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Circle"
                         android:insetLeft="0dp"
                         android:insetTop="0dp"
@@ -131,7 +131,7 @@
                         app:iconSize="34dp"
                         app:iconPadding="0dp"
                         app:iconGravity="textStart"
-                        app:iconTint="@color/white"
+                        app:iconTint="@color/secondaryLightColor"
                         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Circle"
                         android:insetLeft="0dp"
                         android:insetTop="0dp"

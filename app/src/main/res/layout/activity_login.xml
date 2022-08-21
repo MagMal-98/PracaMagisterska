@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="300dp"
-        android:layout_height="240dp"
+        android:layout_height="230dp"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
         android:src="@drawable/logo"/>
@@ -21,15 +21,15 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_gravity="center"
-        android:layout_marginTop="25dp">
+        android:layout_marginTop="20dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login"
-            android:textSize="30sp"
+            android:textSize="27sp"
             android:textStyle="bold"
-            android:textColor="@color/teal_700"
+            android:textColor="@color/primaryDarkColor"
             android:gravity="center_horizontal"
             android:layout_marginVertical="16dp"/>
 
@@ -67,6 +67,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:textSize="18sp"
+            android:textColor="@color/secondaryTextColor"
             android:text="Login"/>
 
         <LinearLayout
@@ -88,9 +90,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:text="Register here"
-                android:textColor="@color/teal_700"
+                android:textColor="@color/primaryDarkColor"
                 android:textStyle="bold"
-                android:textSize="20sp"/>
+                android:textSize="18sp"/>
 
         </LinearLayout>
 

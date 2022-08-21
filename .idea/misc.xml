@@ -11,9 +11,13 @@
         <entry key="app/src/main/res/drawable/ic_baseline_camera_alt_24.xml" value="0.2445" />
         <entry key="app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.245" />
         <entry key="app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.245" />
+        <entry key="app/src/main/res/drawable/ic_baseline_list_24.xml" value="0.231" />
+        <entry key="app/src/main/res/drawable/ic_baseline_local_florist_24.xml" value="0.231" />
+        <entry key="app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.231" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.231" />
         <entry key="app/src/main/res/layout/activity_create_plant.xml" value="0.40525838621940163" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15806159420289856" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_plant_single_view.xml" value="0.40525838621940163" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.15806159420289856" />
         <entry key="app/src/main/res/layout/fragment_add_edit_notification.xml" value="0.25" />

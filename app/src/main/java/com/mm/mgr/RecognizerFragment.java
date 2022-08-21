@@ -3,7 +3,6 @@ package com.mm.mgr;
 import static android.app.Activity.RESULT_OK;
 
 import android.Manifest;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -73,11 +72,8 @@ public class RecognizerFragment extends Fragment {
     }
 
 
-
-
-    public void classifyImage(Bitmap image) {
+    public void classifyImage(Bitmap image) throws Exception {
         try {
-
             ModelUnquant model = ModelUnquant.newInstance(getContext());
 
             // Creates inputs for reference.
@@ -116,7 +112,7 @@ public class RecognizerFragment extends Fragment {
                     maxPos = i;
                 }
             }
-            String[] classes = {"Tulip", "Daisy", "Rose", "Orchid"};
+            String[] classes = {"Rose", "Sunflower", "Carnation", "Dahlia", "Gerbera"};
             result.setText(classes[maxPos]);
 
             String s = "";
@@ -125,14 +121,11 @@ public class RecognizerFragment extends Fragment {
             }
             confidence.setText(s);
 
-
             // Releases model resources if no longer used.
             model.close();
-        } catch (
-                IOException e) {
-            // TODO Handle the exception
+        } catch (IOException e) {
+            throw new Exception(e);
         }
-
     }
 
 
@@ -145,7 +138,11 @@ public class RecognizerFragment extends Fragment {
             imageView.setImageBitmap(image);
 
             image = Bitmap.createScaledBitmap(image, imageSize, imageSize, false);
-            classifyImage(image);
+            try {
+                classifyImage(image);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
